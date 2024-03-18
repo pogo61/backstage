@@ -1107,6 +1107,11 @@ export const spec = {
             },
           },
         },
+        parameters: [
+          {
+            $ref: '#/components/parameters/filter',
+          },
+        ],
       },
     },
     '/entities/by-query': {
@@ -1408,6 +1413,62 @@ export const spec = {
           {
             in: 'path',
             name: 'id',
+            required: true,
+            allowReserved: true,
+            schema: {
+              type: 'string',
+            },
+          },
+        ],
+      },
+    },
+    '/locations/by-entity/{kind}/{namespace}/{name}': {
+      get: {
+        operationId: 'getLocationByEntity',
+        description: 'Get a location for entity.',
+        responses: {
+          '200': {
+            description: 'Ok',
+            content: {
+              'application/json': {
+                schema: {
+                  $ref: '#/components/schemas/Location',
+                },
+              },
+            },
+          },
+          default: {
+            $ref: '#/components/responses/ErrorResponse',
+          },
+        },
+        security: [
+          {},
+          {
+            JWT: [],
+          },
+        ],
+        parameters: [
+          {
+            in: 'path',
+            name: 'kind',
+            required: true,
+            allowReserved: true,
+            schema: {
+              type: 'string',
+            },
+          },
+          {
+            in: 'path',
+            name: 'namespace',
+            required: true,
+            allowReserved: true,
+            schema: {
+              type: 'string',
+            },
+          },
+          {
+            in: 'path',
+            name: 'name',
             required: true,
             allowReserved: true,
             schema: {

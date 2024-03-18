@@ -9,6 +9,7 @@ import { createPullRequest } from 'octokit-plugin-create-pull-request';
 import { GithubCredentialsProvider } from '@backstage/integration';
 import { JsonObject } from '@backstage/types';
 import { Octokit } from 'octokit';
+import { OctokitOptions } from '@octokit/core/dist-types/types';
 import { ScmIntegrationRegistry } from '@backstage/integration';
 import { ScmIntegrations } from '@backstage/integration';
 import { TemplateAction } from '@backstage/plugin-scaffolder-node';
@@ -205,6 +206,12 @@ export function createGithubRepoCreateAction(options: {
           [key: string]: string;
         }
       | undefined;
+    oidcCustomization?:
+      | {
+          useDefault: boolean;
+          includeClaimKeys?: string[] | undefined;
+        }
+      | undefined;
     requireCommitSigning?: boolean | undefined;
   },
   JsonObject
@@ -352,6 +359,12 @@ export function createPublishGithubAction(options: {
           [key: string]: string;
         }
       | undefined;
+    oidcCustomization?:
+      | {
+          useDefault: boolean;
+          includeClaimKeys?: string[] | undefined;
+        }
+      | undefined;
     requiredCommitSigning?: boolean | undefined;
   },
   JsonObject
@@ -375,9 +388,18 @@ export const createPublishGithubPullRequestAction: (
     teamReviewers?: string[] | undefined;
     commitMessage?: string | undefined;
     update?: boolean | undefined;
+    forceFork?: boolean | undefined;
   },
   JsonObject
 >;
+
+// @public
+export function getOctokitOptions(options: {
+  integrations: ScmIntegrationRegistry;
+  credentialsProvider?: GithubCredentialsProvider;
+  token?: string;
+  repoUrl: string;
+}): Promise<OctokitOptions>;
 
 // @public
 const githubModule: () => BackendFeature;
