@@ -1,5 +1,34 @@
 # @backstage/plugin-auth-backend-module-oidc-provider
 
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/backend-common@0.21.5
+  - @backstage/plugin-auth-backend@0.22.2
+  - @backstage/plugin-auth-node@0.4.10
+  - @backstage/backend-plugin-api@0.6.15
+
+## 0.1.5
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-auth-backend@0.22.1
+
+## 0.1.4
+
+### Patch Changes
+
+- 74b1dc9: Increased HTTP request timeout used by OIDC authenticator.
+- 2af5354: Bump dependency `jose` to v5
+- Updated dependencies
+  - @backstage/backend-common@0.21.4
+  - @backstage/plugin-auth-node@0.4.9
+  - @backstage/backend-plugin-api@0.6.14
+  - @backstage/plugin-auth-backend@0.22.0
+
 ## 0.1.4-next.2
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @backstage/plugin-auth-backend-module-google-provider
 
+## 0.1.12
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-auth-node@0.4.10
+  - @backstage/backend-plugin-api@0.6.15
+
+## 0.1.11
+
+### Patch Changes
+
+- 38af71a: Updated dependency `google-auth-library` to `^9.0.0`.
+- Updated dependencies
+  - @backstage/plugin-auth-node@0.4.9
+  - @backstage/backend-plugin-api@0.6.14
+
 ## 0.1.11-next.2
 
 ### Patch Changes

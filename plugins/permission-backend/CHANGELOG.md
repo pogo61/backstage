@@ -1,5 +1,43 @@
 # @backstage/plugin-permission-backend
 
+## 0.5.39
+
+### Patch Changes
+
+- f3e2e86: Properly forward causes of errors from upstream backends in the `PermissionIntegrationClient`
+- Updated dependencies
+  - @backstage/backend-common@0.21.5
+  - @backstage/plugin-auth-node@0.4.10
+  - @backstage/plugin-permission-node@0.7.26
+  - @backstage/backend-plugin-api@0.6.15
+  - @backstage/config@1.2.0
+  - @backstage/errors@1.2.4
+  - @backstage/plugin-permission-common@0.7.13
+
+## 0.5.38
+
+### Patch Changes
+
+- 9c7fb30: Properly forward causes of errors from upstream backends in the `PermissionIntegrationClient`
+
+## 0.5.37
+
+### Patch Changes
+
+- 4467036: Allow unauthenticated access to health check endpoint.
+- 9802004: Migrated to use the new auth services introduced in [BEP-0003](https://github.com/backstage/backstage/blob/master/beps/0003-auth-architecture-evolution/README.md).
+
+  The `createRouter` function now accepts `auth`, `httpAuth` and `userInfo` options. Theses are used internally to support the new backend system, and can be ignored.
+
+- Updated dependencies
+  - @backstage/backend-common@0.21.4
+  - @backstage/plugin-auth-node@0.4.9
+  - @backstage/config@1.2.0
+  - @backstage/errors@1.2.4
+  - @backstage/backend-plugin-api@0.6.14
+  - @backstage/plugin-permission-common@0.7.13
+  - @backstage/plugin-permission-node@0.7.25
+
 ## 0.5.37-next.2
 
 ### Patch Changes

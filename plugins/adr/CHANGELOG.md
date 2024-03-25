@@ -1,5 +1,39 @@
 # @backstage/plugin-adr
 
+## 0.6.15
+
+### Patch Changes
+
+- e8f026a: Use ESM exports of react-use library
+- Updated dependencies
+  - @backstage/core-components@0.14.2
+  - @backstage/plugin-catalog-react@1.11.1
+  - @backstage/plugin-search-react@1.7.8
+  - @backstage/frontend-plugin-api@0.6.2
+  - @backstage/integration-react@1.1.25
+  - @backstage/core-plugin-api@1.9.1
+  - @backstage/catalog-model@1.4.5
+  - @backstage/plugin-adr-common@0.2.21
+  - @backstage/plugin-search-common@1.2.11
+
+## 0.6.14
+
+### Patch Changes
+
+- 5335634: Fixed Azure DevOps ADR file path reading
+- 669efc6: Remove unused package dependencies
+- 38b92a0: Added ESLint rule `no-top-level-material-ui-4-imports` in the ADR plugin to migrate the Material UI imports.
+- Updated dependencies
+  - @backstage/plugin-adr-common@0.2.21
+  - @backstage/core-components@0.14.1
+  - @backstage/integration-react@1.1.25
+  - @backstage/plugin-catalog-react@1.11.0
+  - @backstage/plugin-search-common@1.2.11
+  - @backstage/catalog-model@1.4.5
+  - @backstage/core-plugin-api@1.9.1
+  - @backstage/frontend-plugin-api@0.6.1
+  - @backstage/plugin-search-react@1.7.7
+
 ## 0.6.14-next.2
 
 ### Patch Changes
